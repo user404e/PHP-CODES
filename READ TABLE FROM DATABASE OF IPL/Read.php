@@ -2,7 +2,7 @@
     $conn = mysqli_connect("localhost","root","");
 
     if($conn){
-        echo "Connection Created Successfully";
+        echo "Connected Successfully";
     }
     else{
         echo "Connection Cant Be Created !";
