@@ -1,26 +1,23 @@
 <?php
-    $name = $_POST["name"];
-    $enrno = $_POST["enrno"];
-    $address = $_POST["address"];
-    $mobilenumber = $_POST["mobilenumber"];
-    $email = $_POST["email"];
-    $gender = $_POST["gender"];
-    $department = $_POST["department"];
-    $sem = $_POST["sem"];
-
-    $conn = mysqli_connect("localhost","root","","demo");
+    $conn = mysqli_connect("localhost","root","","test");
 
     if($conn){
-        $sql = "INSERT INTO studentdata VALUES('".$name."','".$enrno."','".$address."','".$gender."','".$department."','".$sem."','".$email."','".$mobilenumber."');";
-        $result = mysqli_query($conn,$sql);
-        if($result){
-            echo "VALUES INSERTED ";
+        $sql1 = "create table demo2 (srno int(5));";
+        $result1 = mysqli_query($conn,$sql1);
+
+        $sql2 = "insert into demo2 values(1),(2);";
+        $result2 = mysqli_query($conn,$sql2);
+
+        if($result1){
+            echo "Table Created Sucessfully";
         }
         else{
-            echo "SOMETHING WENT WRONG";
+            echo "Table Cannot Be Created";
         }
-    }
-    else{
-        echo "CANNOT CONNECT TO DATABASE";
+        if ($result2) {
+            echo "Value Inserted Successflly";
+        } else {
+            echo "Value Cannot Be Created";
+        }    
     }
 ?>

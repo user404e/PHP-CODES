@@ -1,5 +1,5 @@
 <?php
-    $s1 = $_POST["gender"];
+    $s1 = $_POST["address"];
 
-    echo $s1;
+   echo $s1 . "<br>";
 ?>
