@@ -2,10 +2,10 @@
     $conn = mysqli_connect("localhost","root","","test");
 
     if($conn){
-        $sql = "DELETE FROM mytable WHERE srno = 1;";
+        $sql = "UPDATE TABLE mytable set name = 'devendra' WHERE srno = 2;";
         $r = mysqli_query($conn,$sql);
         if($r){
-            echo "value insert";
+            echo "Updated Successfully";
         }
         else{
             echo "cannot";
